@@ -1,9 +1,10 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const SingleChef = ({ singleChef }) => {
-    const { ChefPicture, Likes, chefName, description, experience, recipes } = singleChef;
+    const { ChefPicture, Likes, chefName, description, experience, recipes,_id } = singleChef;
     return (
         <div>
             <div className="card  w-96 bg-base-100 shadow-xl rounded-md">
@@ -19,7 +20,7 @@ const SingleChef = ({ singleChef }) => {
                     </div>
                 </div>
                 <div className='w-full bg-primaryColor text-white text-xl font-bold text-center py-3 rounded-t-lg'>
-                    <button>View Recipes</button>
+                    <Link to={`/chef/${_id}`}><button>View Recipes</button></Link>
                 </div>
             </div>
         </div>
