@@ -1,10 +1,10 @@
 /* eslint-disable no-unused-vars */
-import banner1 from "../../../public/images/1.jpeg"
-import banner2 from "../../../public/images/2.jpeg"
-import banner3 from "../../../public/images/3.jpeg"
-import banner4 from "../../../public/images/4.jpeg"
-import banner5 from "../../../public/images/5.jpeg"
-import banner6 from "../../../public/images/6.jpeg"
+import banner1 from "/images/1.jpeg"
+import banner2 from "/images/2.jpeg"
+import banner3 from "/images/3.jpeg"
+import banner4 from "/images/4.jpeg"
+import banner5 from "/images/5.jpeg"
+import banner6 from "/images/6.jpeg"
 
 const Banner = () => {
     
