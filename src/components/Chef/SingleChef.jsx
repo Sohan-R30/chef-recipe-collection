@@ -19,8 +19,8 @@ const SingleChef = ({ singleChef }) => {
                         <p>Likes : {Likes}</p>
                     </div>
                 </div>
-                <div className='w-full bg-primaryColor text-white text-xl font-bold text-center py-3 rounded-t-lg'>
-                    <Link to={`/chef/${_id}`}><button>View Recipes</button></Link>
+                <div>
+                    <Link to={`/chef/${_id}`}><button className='w-full bg-primaryColor hover:bg-[#4b7bec] text-white text-xl font-bold text-center py-3 rounded-t-lg'>View Recipes</button></Link>
                 </div>
             </div>
         </div>

@@ -1,22 +1,60 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
-import React from 'react';
+import React, { useState } from 'react';
+import Rating from 'react-rating';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 const Recipes = ({ recipe }) => {
+    const [favourite, setFavourite] = useState(false);
     console.log(recipe);
     const { recipeName, ingredients, cookingMethod, rating } = recipe
+
+    const handleFavourite = () => {
+        setFavourite(true);
+        toast.success("Added to Favourite");
+    }
     return (
         <div>
-            <div className="card w-96 bg-neutral text-neutral-content">
+            <div className="card bg-[#dff9fb] text-black h-[850px]">
                 <div className="card-body items-center text-center">
-                    <h2 className="card-title">Cookies!</h2>
-                    <p>We are using cookies for no reason.</p>
+                    <h2 className="card-title text-3xl py-10">Recipe Names : {recipeName}</h2>
+                    <div className='flex gap-5 flex-wrap justify-center'>
+                        <div className='border w-80 p-5'>
+                            <p className='text-xl font-bold pb-5'>Cooking Method ...</p>
+                            {
+                                cookingMethod && cookingMethod.map((cookingMethod, index) => <p key={index}>{cookingMethod.slice(0, 35)} ...</p>)
+                            }
+                        </div>
+                        <div className='border w-80 p-5'>
+                            <p className='text-xl font-bold pb-5'>Ingredients ...</p>
+                            {
+                                ingredients && ingredients.map((ingredient, index) => <p key={index}>{ingredient.slice(0, 35)}</p>)
+                            }
+                        </div>
+                    </div>
+                    <div>
+                        <p>ratings : {rating}</p>
+                    </div>
                     <div className="card-actions justify-end">
-                        <button className="btn btn-primary">Accept</button>
-                        <button className="btn btn-ghost">Deny</button>
+                        <div className="my-5">
+                            <button onClick={handleFavourite} className={`btn w-full bg-primaryColor  border-none hover:bg-[#4b7bec] text-white`} disabled={favourite}>Add to favourite</button>
+                        </div>
                     </div>
                 </div>
             </div>
+            <ToastContainer
+                position="top-center"
+                autoClose={5000}
+                hideProgressBar={false}
+                newestOnTop={false}
+                closeOnClick
+                rtl={false}
+                pauseOnFocusLoss
+                draggable
+                pauseOnHover
+                theme="dark"
+            />
         </div>
     );
 };
