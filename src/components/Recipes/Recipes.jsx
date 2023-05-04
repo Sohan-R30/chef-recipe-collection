@@ -1,15 +1,18 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-import Rating from 'react-rating';
+// import Rating from 'react-rating';
 import { FaStar, FaStarHalf } from 'react-icons/fa';
 import { ToastContainer, toast } from 'react-toastify';
+import { Rating } from '@smastrom/react-rating'
+import '@smastrom/react-rating/style.css'
 import 'react-toastify/dist/ReactToastify.css';
 
 const Recipes = ({ recipe }) => {
     const [favourite, setFavourite] = useState(false);
     console.log(recipe);
-    const { recipeName, ingredients, cookingMethod, rating } = recipe
+    const { recipeName, ingredients, cookingMethod, rating } = recipe;
+
 
     const handleFavourite = () => {
         setFavourite(true);
@@ -34,15 +37,14 @@ const Recipes = ({ recipe }) => {
                             }
                         </div>
                     </div>
-                    <div>
-                        <p>ratings : {rating}</p>
-                        <Rating className='text-3xl'
-                            placeholderRating={rating}
-                            emptySymbol={<FaStarHalf className='text-primaryColor'></FaStarHalf>}
-                            placeholderSymbol={<FaStar className='text-primaryColor'/>}
-                            fullSymbol={<FaStar className='text-primaryColor'></FaStar>}
-                            readonly
+                    <div className='flex items-center'>
+                        <p className='text-xl'>ratings : </p>
+                        <Rating 
+                        style={{ maxWidth: 150 }} 
+                        value={rating} 
+                        readOnly
                         />
+                        {rating}
                     </div>
                     <div className="card-actions justify-end">
                         <div className="my-5">

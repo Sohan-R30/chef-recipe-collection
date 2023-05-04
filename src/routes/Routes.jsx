@@ -3,6 +3,7 @@ import Main from "../layout/Main";
 import Home from "../pages/Home";
 import Blog from "../pages/Blog";
 import ChefWithRecipe from "../components/ChefWithRecipe/ChefWithRecipe";
+import Error from "../components/Error/Error";
 
 
 
@@ -11,6 +12,7 @@ const router = createBrowserRouter(
         {
             path: "/",
             element: <Main></Main>,
+            errorElement: <Error></Error>,
             children:[
                 {
                     path: "/",
