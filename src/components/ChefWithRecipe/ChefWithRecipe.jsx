@@ -10,7 +10,7 @@ const ChefWithRecipe = () => {
     const { ChefPicture, chefName, description, experience, recipes, Likes,} = chefWithRecipe;
     return (
         <div className='my-20'>
-            <div className='flex justify-center items-center gap-40'>
+            <div className='flex flex-wrap justify-center items-center gap-40'>
                 <div>
                     <img className='w-96 rounded-full' src={ChefPicture} alt={chefName} />
                 </div>
