@@ -2,6 +2,7 @@
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
 import Rating from 'react-rating';
+import { FaStar, FaStarHalf } from 'react-icons/fa';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
@@ -35,6 +36,13 @@ const Recipes = ({ recipe }) => {
                     </div>
                     <div>
                         <p>ratings : {rating}</p>
+                        <Rating className='text-3xl'
+                            placeholderRating={rating}
+                            emptySymbol={<FaStarHalf className='text-primaryColor'></FaStarHalf>}
+                            placeholderSymbol={<FaStar className='text-primaryColor'/>}
+                            fullSymbol={<FaStar className='text-primaryColor'></FaStar>}
+                            readonly
+                        />
                     </div>
                     <div className="card-actions justify-end">
                         <div className="my-5">
