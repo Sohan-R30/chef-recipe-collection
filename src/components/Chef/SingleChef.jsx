@@ -7,9 +7,9 @@ import { Link } from 'react-router-dom';
 const SingleChef = ({ singleChef }) => {
     const { ChefPicture, Likes, chefName, experience, recipes, _id } = singleChef;
     return (
-        <LazyLoad height={800} >
+        <LazyLoad height={800}>
             <div>
-                <div className="card  w-96 bg-base-100 shadow-xl rounded-md">
+                <div className="card  sm:w-96 bg-base-100 shadow-xl rounded-md">
                     <figure>
                         <img className='w-80 h-96 rounded-md' src={ChefPicture} alt={chefName} />
                     </figure>

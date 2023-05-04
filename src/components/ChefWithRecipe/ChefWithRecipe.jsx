@@ -7,9 +7,7 @@ const ChefWithRecipe = () => {
     const [shortBio, setShortBio] = useState(false);
 
     const chefWithRecipe = useLoaderData();
-    console.log(chefWithRecipe);
     const { ChefPicture, chefName, description, experience, recipes, Likes,} = chefWithRecipe;
-    console.log(recipes)
     return (
         <div className='my-20'>
             <div className='flex justify-center items-center gap-40'>

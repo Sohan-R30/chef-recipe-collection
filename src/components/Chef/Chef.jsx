@@ -16,11 +16,10 @@ const Chef = () => {
                 setIsloading(false)
             })
     }, [])
-    console.log(chef);
     return (
         <div className='my-40'>
             <div className='text-center text-3xl mb-10'>
-                <h2>Our Chefs</h2>
+                <h2 className='mt-2 text-3xl leading-8 font-extrabold tracking-tight text-gray-900 sm:text-4xl'>Our Chefs</h2>
                 {
                     isLoading && (
                         <div className='flex justify-center'>
@@ -32,7 +31,7 @@ const Chef = () => {
                     )
                 }
             </div>
-            <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-10'>
+            <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center place-items-center gap-10'>
                {
                    chef && chef.map(singleChef => <SingleChef singleChef={singleChef} key={singleChef._id}></SingleChef>)
                }

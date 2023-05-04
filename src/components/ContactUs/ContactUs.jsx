@@ -26,12 +26,18 @@ const ContactUs = () => {
                             </div>
                             <div className="form-control">
                                 <label className="label">
+                                    <span className="label-text">Choose Date</span>
+                                </label>
+                                <input type="date" className="input input-bordered" />
+                            </div>
+                            <div className="form-control">
+                                <label className="label">
                                     <span className="label-text">Message</span>
                                 </label>
                                 <textarea className='input input-bordered h-40' name="" id="" cols="30" rows="10" placeholder='Write your message'></textarea>
                             </div>
                             <div className="form-control mt-6">
-                                <button className="btn bg-primaryColor border-none hover:bg-[#4b7bec]">Sent Message</button>
+                                <button className="btn bg-primaryColor border-none hover:bg-[#4b7bec]">Get Appoinment</button>
                             </div>
                         </div>
                     </div>
