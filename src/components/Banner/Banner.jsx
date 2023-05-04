@@ -9,8 +9,8 @@ import banner6 from "/images/6.jpeg"
 const Banner = () => {
     
     return (
-        <div className='flex justify-around items-center p-10 max-w-7xl mx-auto'>
-            <p className='w-80 sm:w-1/3 text-xl tracking-wider'> <span className="text-primaryColor text-2xl">Welcome</span> to our chef recipe website, where we bring the world of culinary excellence to your kitchen. Our mission is to inspire and empower home cooks to create delicious, restaurant-quality meals from the comfort of their own homes. With a focus on fresh, seasonal ingredients and innovative techniques, our collection of chef-inspired recipes offers something for every palate and occasion.</p>
+        <div className='grid grid-cols-1 md:grid-cols-2 justify-center md:justify-around items-center p-10 max-w-7xl mx-auto'>
+            <p className='  text-xl tracking-wider'> <span className="text-primaryColor text-2xl">Welcome</span> to our chef recipe website, where we bring the world of culinary excellence to your kitchen. Our mission is to inspire and empower home cooks to create delicious, restaurant-quality meals from the comfort of their own homes. With a focus on fresh, seasonal ingredients and innovative techniques, our collection of chef-inspired recipes offers something for every palate and occasion.</p>
             <div className="carousel carousel-center w-96 p-4 space-x-4 bg-primary-content rounded-box">
                 <div className="carousel-item">
                     <img src={banner1} className="rounded-box h-96" />

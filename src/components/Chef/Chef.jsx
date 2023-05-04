@@ -21,7 +21,6 @@ const Chef = () => {
         <div className='my-40'>
             <div className='text-center text-3xl mb-10'>
                 <h2>Our Chefs</h2>
-                <p>Meet our chefs</p>
                 {
                     isLoading && (
                         <div className='flex justify-center'>

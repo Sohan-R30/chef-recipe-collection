@@ -8,9 +8,9 @@ const ContactUs = () => {
             <div className='text-center text-3xl mb-10'>
                 <h2>Contact With Our Chefs</h2>
             </div>
-            <div className="hero min-h-screen bg-base-200">
-                <div className="hero-content flex-col lg:flex-row-reverse">
-                    <div className="card flex-shrink-0 w-full max-w-sm shadow-2xl bg-base-100">
+            <div className="bg-base-200 py-10">
+                <div className="w-full sm:w-2/4 mx-auto">
+                    <div className="card flex-shrink-0  shadow-2xl bg-base-100">
                         <div className="card-body">
                             <div className="form-control">
                                 <label className="label">

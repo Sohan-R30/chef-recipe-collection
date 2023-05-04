@@ -33,7 +33,7 @@ const Footer = () => {
                     </div>
                 </div>
             </div>
-            <div className='absolute bottom-0 left-1/3'>
+            <div className='absolute bottom-0 break-all mx-5'>
                 <p className='text-xl tracking-widest'>Copyright &copy; all rights are reserved</p>
             </div>
         </div>
