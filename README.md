@@ -8,4 +8,4 @@
 
 
 
-[LiveLink] ( "project live link")
+[LiveLink] (https://chef-recipe-collection.web.app/ "project live link")
