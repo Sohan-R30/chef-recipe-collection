@@ -5,11 +5,16 @@ import { InfinitySpin } from 'react-loader-spinner'
 
 const Chef = () => {
     const [chef, setChef] = useState([]);
+    const [isLoading, setIsloading] = useState(false);
 
     useEffect(() => {
+        setIsloading(true);
         fetch("https://chef-recipe-collection-server-side-sohan-r30.vercel.app/")
             .then(res => res.json())
-            .then(data => setChef(data))
+            .then(data => {
+                setChef(data)
+                setIsloading(false)
+            })
     }, [])
     console.log(chef);
     return (
@@ -17,23 +22,22 @@ const Chef = () => {
             <div className='text-center text-3xl mb-10'>
                 <h2>Our Chefs</h2>
                 <p>Meet our chefs</p>
-            </div>
-            {
-                chef ? (
-                    <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-10'>
-                        {
-                            chef && chef.map(singleChef => <SingleChef singleChef={singleChef} key={singleChef._id}></SingleChef>)
-                        }
-                    </div>
-                ) : (
-                    <div className='flex justify-center'>
+                {
+                    isLoading && (
+                        <div className='flex justify-center'>
                         <InfinitySpin
                                 width='200'
                                 color="#70a1ff"
                             />
                     </div> 
-                )
-            }
+                    )
+                }
+            </div>
+            <div className='max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 justify-center gap-10'>
+               {
+                   chef && chef.map(singleChef => <SingleChef singleChef={singleChef} key={singleChef._id}></SingleChef>)
+               }
+            </div>
         </div>
     );
 };

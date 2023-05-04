@@ -1,8 +1,6 @@
 /* eslint-disable react/prop-types */
 /* eslint-disable no-unused-vars */
 import React, { useState } from 'react';
-// import Rating from 'react-rating';
-import { FaStar, FaStarHalf } from 'react-icons/fa';
 import { ToastContainer, toast } from 'react-toastify';
 import { Rating } from '@smastrom/react-rating'
 import '@smastrom/react-rating/style.css'
@@ -10,9 +8,7 @@ import 'react-toastify/dist/ReactToastify.css';
 
 const Recipes = ({ recipe }) => {
     const [favourite, setFavourite] = useState(false);
-    console.log(recipe);
     const { recipeName, ingredients, cookingMethod, rating } = recipe;
-
 
     const handleFavourite = () => {
         setFavourite(true);
